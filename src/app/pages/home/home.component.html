@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="filters">
+        <div class="wrapper">
+            <div class="poke-types">
+                <div *ngFor="let type of types" (click)="filtered$.next(type)" class="icon type  {{ type }}">
+                    <img [src]="'../../../assets/svg/' + type + '.svg'" alt="" class="type">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper flex">
+        <div *ngIf="!pokemonsFiltered" class="poke-list">
+            <div (click)="selectPokemon(pokemon.name)" class="poke" *ngFor="let pokemon of pokemons$ | async">
+                <p>{{ pokemon.name }} </p>
+            </div>
+        </div>
+        <div *ngIf="pokemonsFiltered" class="poke-list filtered">
+            <div (click)="selectPokemon(pokemon.pokemon.name)" class="poke" *ngFor="let pokemon of pokemonsFiltered">
+                <p>{{ pokemon.pokemon.name }} </p>
+            </div>
+        </div>
+        <div class="poke-column" [class.active]="pokemonSelected">
+            <div *ngIf="pokemonSelected">
+                <app-poke-info></app-poke-info>
+            </div>
+        </div>
+    </div>
+</div>

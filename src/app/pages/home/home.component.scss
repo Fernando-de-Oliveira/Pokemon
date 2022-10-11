@@ -1,0 +1,204 @@
+.container {
+    background: #792020;
+    margin-top: 100px;
+    overflow: hidden;
+    height: calc(100vh - 100px);
+}
+
+.poke {
+    margin: 0 10px 30px 0;
+    font-weight: 500;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 28%;
+    height: 70px;
+    color: aliceblue;
+    background-color: brown;
+    border: 9px solid;
+    border-left-color: #792020;
+    border-bottom-color: #da3a3a;
+    border-right-color: #da3a3a;
+    border-top-color: #792020;
+    cursor: pointer;
+    transition: all ease .3s;
+    box-shadow: -2px 4px 6px 0px #828b99;
+    &:hover {
+        background-color: #7d2020;
+    }
+    p {
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+    }
+    &-list {
+        width: 45%;
+        display: flex;
+        background-color: antiquewhite;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 3rem;
+        border-radius: 10px;
+        overflow-x: scroll;
+        box-shadow: none !important;
+        height: calc(100vh - 220px);
+    }
+    &-list::-webkit-scrollbar {
+        width: 15px;
+        /* width of the entire scrollbar */
+    }
+    &-list::-webkit-scrollbar-track {
+        background: antiquewhite;
+        border-radius: 20px;
+    }
+    &-list::-webkit-scrollbar-thumb {
+        background-color: #792020;
+        cursor: pointer;
+        border-radius: 20px;
+        border: 3px solid antiquewhite;
+    }
+    &-column {
+        width: 45%;
+        padding: 0;
+        height: calc(100vh - 240px);
+        margin-left: 30px;
+    }
+    &-types {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.wrapper {
+    padding: 0 50px;
+    &.flex {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+html body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1rem;
+    background: #effdff;
+}
+
+.icon {
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+    margin: 30px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 200ms all;
+    &:hover {
+        filter: saturate(200%);
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    img {
+        max-width: 35px;
+    }
+}
+
+.filters {
+    width: 100%;
+    height: 110px;
+}
+
+.bug {
+    background: #92BC2C;
+    box-shadow: 0 0 20px #92BC2C;
+}
+
+.dark {
+    background: #595761;
+    box-shadow: 0 0 20px #595761;
+}
+
+.dragon {
+    background: #0C69C8;
+    box-shadow: 0 0 20px #0C69C8;
+}
+
+.electric {
+    background: #F2D94E;
+    box-shadow: 0 0 20px #F2D94E;
+}
+
+.fire {
+    background: #FBA54C;
+    box-shadow: 0 0 20px #FBA54C;
+}
+
+.fairy {
+    background: #EE90E6;
+    box-shadow: 0 0 20px #EE90E6;
+}
+
+.fighting {
+    background: #D3425F;
+    box-shadow: 0 0 20px #D3425F;
+}
+
+.flying {
+    background: #A1BBEC;
+    box-shadow: 0 0 20px #A1BBEC;
+}
+
+.ghost {
+    background: #5F6DBC;
+    box-shadow: 0 0 20px #5F6DBC;
+}
+
+.grass {
+    background: #5FBD58;
+    box-shadow: 0 0 20px #5FBD58;
+}
+
+.ground {
+    background: #DA7C4D;
+    box-shadow: 0 0 20px #DA7C4D;
+}
+
+.ice {
+    background: #75D0C1;
+    box-shadow: 0 0 20px #75D0C1;
+}
+
+.normal {
+    background: #A0A29F;
+    box-shadow: 0 0 20px #A0A29F;
+}
+
+.poison {
+    background: #B763CF;
+    box-shadow: 0 0 20px #B763CF;
+}
+
+.psychic {
+    background: #FA8581;
+    box-shadow: 0 0 20px #FA8581;
+}
+
+.rock {
+    background: #C9BB8A;
+    box-shadow: 0 0 20px #C9BB8A;
+}
+
+.steel {
+    background: #5695A3;
+    box-shadow: 0 0 20px #5695A3;
+}
+
+.water {
+    background: #539DDF;
+    box-shadow: 0 0 20px #539DDF;
+}
