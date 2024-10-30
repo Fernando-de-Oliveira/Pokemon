@@ -14,6 +14,9 @@
     align-items: center;
     border-radius: 10px;
     width: 28%;
+    @media (max-width: 1310px) {
+      width: 40%;
+    }
     height: 70px;
     color: aliceblue;
     background-color: brown;
@@ -33,6 +36,7 @@
         font-size: 20px;
     }
     &-list {
+        position: relative;
         width: 45%;
         display: flex;
         background-color: antiquewhite;
@@ -106,6 +110,18 @@ html body {
     img {
         max-width: 35px;
     }
+}
+
+.type-name {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #792020;
+  font-weight: 700;
+  font-size: 20px;
+  transform: translateY(-50%);
+  text-transform: capitalize;
 }
 
 .filters {

@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   pokemonsFiltered: Array<any>;
   pokemonSelected: boolean;
   types: Array<string> = this.pokemon.types;
+  type: string;
 
   subscription: Subscription = new Subscription();
 
@@ -29,7 +30,10 @@ export class HomeComponent implements OnInit, OnDestroy {
 
    filter(): Subscription{
     return this.filtered$.pipe(
-      switchMap(type => this.pokemon.getByType(type)),
+      switchMap(type => {
+        this.type = type
+        return this.pokemon.getByType(type)
+      }),
       map(e => e.pokemon)).subscribe(res => {
         this.pokemonsFiltered = res;
       });

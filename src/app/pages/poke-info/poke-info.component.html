@@ -1,11 +1,16 @@
 <div class="poke-info" *ngIf="pokemonInfo">
     <div class="poke-container">
-        <img class="poke-img" [src]="pokemonInfo.sprites['versions']['generation-v']['black-white'].animated.front_default">
+      <div class="poke-column">
+        <img (click)="changeImg()" class="poke-img" [src]="pokemonInfo.sprites['versions']['generation-v']['black-white'].animated[imgTypes[idGen].name]">
         <h1>{{pokemonInfo.name}}</h1>
         <div class="poke-types">
             <div *ngFor="let pokeType of pokemonInfo.types" class="icon type  {{ pokeType.type.name }}">
                 <img [src]="'../../../assets/svg/' + pokeType.type.name + '.svg'" alt="" class="type">
             </div>
         </div>
+      </div>
+      <div class="poke-column">
+
+      </div>
     </div>
 </div>

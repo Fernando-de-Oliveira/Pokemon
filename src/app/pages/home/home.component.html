@@ -10,11 +10,12 @@
     </div>
     <div class="wrapper flex">
         <div *ngIf="!pokemonsFiltered" class="poke-list">
-            <div (click)="selectPokemon(pokemon.name)" class="poke" *ngFor="let pokemon of pokemons$ | async">
-                <p>{{ pokemon.name }} </p>
-            </div>
+          <div (click)="selectPokemon(pokemon.name)" class="poke" *ngFor="let pokemon of pokemons$ | async">
+            <p>{{ pokemon.name }} </p>
+          </div>
         </div>
         <div *ngIf="pokemonsFiltered" class="poke-list filtered">
+          <p class="type-name">{{type}}</p>
             <div (click)="selectPokemon(pokemon.pokemon.name)" class="poke" *ngFor="let pokemon of pokemonsFiltered">
                 <p>{{ pokemon.pokemon.name }} </p>
             </div>

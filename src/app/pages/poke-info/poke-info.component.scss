@@ -4,8 +4,13 @@
         height: calc(100vh - 220px);
         border-radius: 10px;
         h1 {
+          font-size: 35px;
+        }
+        h2 {
+          font-size: 30px;
+        }
+        h1, h2 {
             margin-top: 20px;
-            font-size: 35px;
             text-transform: capitalize;
             color: aliceblue;
             font-weight: 700;
@@ -13,10 +18,15 @@
         }
         img {
             height: 100px;
+            cursor: pointer;
         }
     }
     &-container {
         padding: 3rem;
+        display: flex;
+    }
+    &-column:first-child{
+      margin-right: 25px;
     }
     &-types {
         display: flex;

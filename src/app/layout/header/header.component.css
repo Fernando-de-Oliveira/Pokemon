@@ -39,6 +39,7 @@
 .head-row img {
     max-width: 90px;
     margin-right: 30px;
+    cursor: pointer;
 }
 
 .head-row h1 {
